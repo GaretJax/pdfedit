@@ -1,0 +1,14 @@
+base:
+  build: .
+
+BASECONFIG: &BASE_CONFIG
+  image: pdfedit_base
+  volumes:
+    - .:/usr/src/app
+
+app:
+  <<: *BASE_CONFIG
+
+shell:
+  <<: *BASE_CONFIG
+  command: bash
